@@ -31,7 +31,7 @@ html {
     text-decoration: none;
     display: inline-block;
     font-size: 12px;
-    width: 90%;
+    width: 100%;
 }
 
 .button:hover{
@@ -49,4 +49,38 @@ html {
 .card:hover{
     border: 1px solid black!important;
     border-radius: 0;
+}
+.buttonItemCount{
+    background-color: black;
+    border: 1px black solid;
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+    
+}
+
+.buttonIrCarrito{
+    background-color: white;
+    border: 1px black solid;
+    color: black;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    width: 100%;
+}
+
+.imgCarrito{
+    width: 175px;
+    height: auto;
+    
+}
+
+.w-175{
+    width: 175px;
 }

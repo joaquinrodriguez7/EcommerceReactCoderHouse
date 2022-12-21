@@ -4,11 +4,15 @@ import { Link } from 'react-router-dom'
 import "../App.css";
 
 const Item = ({ id, name, price, image }) => {
-    return (
+  const formatMoney = (num) => {
+    return "$ " + num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+}
+
+  return (
     <Card className="card mt-3 justify-content-center col-md-3">
       <img className='border-0' src={image} alt="" />
       <Card.Body className="position-relative">
-        <Card.Text className='text-bold-700'>${price}</Card.Text>
+        <Card.Text className='text-bold-700'>{formatMoney(price)}</Card.Text>
         <Card.Text className="text-bold-700 mb-5">
          {name}
         </Card.Text>
@@ -17,5 +21,6 @@ const Item = ({ id, name, price, image }) => {
     </Card>     
     )
 }
+
 
 export default Item;

@@ -18,7 +18,7 @@ const Navbar = () => {
             <Right>
               <MenuItem className="text-secondary">REGISTRARSE</MenuItem>
               <MenuItem className="text-secondary">INICIAR SESIÓN</MenuItem>
-              <MenuItem><CartWidget /></MenuItem>
+              <Link to='/cart'><MenuItem><CartWidget /></MenuItem></Link>
             </Right>
             </Wrapper>
         </nav>
