@@ -3,11 +3,11 @@ import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 import "../App.css";
 
-const Item = ({ id, name, price, image }) => {
-  const formatMoney = (num) => {
-    return "$ " + num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
-  }
+export const formatMoney = (num) => {
+  return "$ " + num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+}
 
+const Item = ({ id, name, price, image }) => {
   return (
     <Card className="card mt-3 justify-content-center col-md-3">
       <img className="border-0 mt-3" src={image} alt="" />

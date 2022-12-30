@@ -2,13 +2,11 @@ import ItemCount from "./ItemCount";
 import { useContext, useState } from "react";
 import { CartContext } from "./CartContext";
 import { Link } from "react-router-dom";
+import { formatMoney } from "./Item";
 
 const ItemDetail = ({ item }) => {
     const [itemCount, setItemCount] = useState(0)
     const { addToCart } = useContext(CartContext)
-    const formatMoney = (num) => {
-        return "$ " + num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
-    }
     const onAdd = (qty) => {
         setItemCount(qty);
         addToCart(item, qty)

@@ -4,6 +4,7 @@ import { collection, increment, serverTimestamp, doc, setDoc, updateDoc } from "
 import { db } from "../utils/firebaseConfig";
 import swal from "sweetalert";
 import { Link } from "react-router-dom";
+import { formatMoney } from "./Item";
 
 const Cart = () => {
     const myCartContext = useContext(CartContext);
@@ -70,7 +71,7 @@ const Cart = () => {
                                             <th scope="row" className="col-3"><img className="imgCarrito" src={item.image} alt="" /> </th>
                                             <td className="col-5 text-bold-700 fs-5">{item.name}</td>
                                             <td className="col-2 fs-5">{item.qty} unidades</td>
-                                            <td className="col text-bold-700 fs-5">$ {myCartContext.calcTotalPerItem(item.id)}</td>
+                                            <td className="col text-bold-700 fs-5"> {formatMoney(myCartContext.calcTotalPerItem(item.id))}</td>
                                             <td className="col pe-3"><button className="button" onClick={() => myCartContext.deleteItem(item.id)}>Eliminar producto</button> </td>
                                         </tr>
                                     </tbody>
@@ -79,9 +80,9 @@ const Cart = () => {
                         )}
                         <div className="w-50 border border-dark px-3 py-2 mb-3 mx-auto">
                             <div className="d-flex justify-content-between"><span className="text-bold-700 fs-4">RESUMEN DEL PEDIDO</span></div>
-                            <div className="d-flex justify-content-between"> <span>{myCartContext.calcItemsQty()} PRODUCTOS </span> <span>$ {myCartContext.calcSubTotal()}</span></div>
+                            <div className="d-flex justify-content-between"> <span>{myCartContext.calcItemsQty()} PRODUCTOS </span> <span> {formatMoney(myCartContext.calcSubTotal())}</span></div>
                             <div className="d-flex justify-content-between"> <span>ENTREGA</span> <span>GRATIS</span></div>
-                            <div className="d-flex justify-content-between"> <span className="text-bold-700">TOTAL <span className="fw-lighter">(IVA incluido ${myCartContext.calcIva()})</span> </span><span className="text-bold-700">$ {myCartContext.calcTotal()}</span></div>
+                            <div className="d-flex justify-content-between"> <span className="text-bold-700">TOTAL <span className="fw-lighter">(IVA incluido {formatMoney(myCartContext.calcIva())})</span> </span><span className="text-bold-700"> {formatMoney(myCartContext.calcTotal())}</span></div>
                         </div>
                         <div className="pb-3 d-grid gap-2 col-6 mx-auto">
                             <button onClick={createOrder} className="button">CREAR ORDEN</button>

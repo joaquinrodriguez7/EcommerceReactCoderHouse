@@ -26,10 +26,6 @@ const CartContextProvider = ({ children }) => {
         }
     }
 
-    const formatMoney = (num) => {
-        return "$ " + num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
-    }
-
     const deleteItem = (id) => {
         const arrayCarrito = cartList.filter(item => item.id !== id)
         setCartList(arrayCarrito)
@@ -62,7 +58,7 @@ const CartContextProvider = ({ children }) => {
     }
 
     return (
-        <CartContext.Provider value={{ cartList, addToCart, deleteItem, deleteAll, calcTotalPerItem, calcSubTotal, calcTotal, calcItemsQty, calcIva, formatMoney }} >
+        <CartContext.Provider value={{ cartList, addToCart, deleteItem, deleteAll, calcTotalPerItem, calcSubTotal, calcTotal, calcItemsQty, calcIva }} >
             {children}
         </CartContext.Provider>
     )
