@@ -5,24 +5,25 @@
 }
 
 html {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
-.iconoCarrito{
+.iconoCarrito {
     color: white;
     width: 30px;
     height: 30px;
 }
 
-.text-bold-400{
+.text-bold-400 {
     font-weight: 400;
 }
 
-.text-bold-700{
+.text-bold-700 {
     font-weight: 700;
+    color: black;
 }
 
-.button{
+.button {
     background-color: black;
     border: 1px black solid;
     color: white;
@@ -34,23 +35,22 @@ html {
     width: 100%;
 }
 
-.button:hover{
+.button:hover {
     background-color: black;
     color: white;
 }
 
-.card{
-    /* border: none; */
+.card {
     border-radius: 0;
-    border-color: white!important;
-    
+    border-color: white !important;
 }
 
-.card:hover{
-    border: 1px solid black!important;
+.card:hover {
+    border: 1px solid black !important;
     border-radius: 0;
 }
-.buttonItemCount{
+
+.buttonItemCount {
     background-color: black;
     border: 1px black solid;
     color: white;
@@ -60,10 +60,9 @@ html {
     width: 25px;
     height: 25px;
     font-size: 15px;
-    
 }
 
-.buttonIrCarrito{
+.buttonIrCarrito {
     background-color: white;
     border: 1px black solid;
     color: black;
@@ -75,12 +74,21 @@ html {
     width: 100%;
 }
 
-.imgCarrito{
-    width: 175px;
-    height: auto;
-    
+.buttonIrCarrito:hover {
+    background-color: black;
+    border: 1px black solid;
+    color: white;
 }
 
-.w-175{
+.imgCarrito {
     width: 175px;
+    height: auto;
+}
+
+.w-175 {
+    width: 175px;
+}
+
+.text-right {
+    text-align: end !important;
 }

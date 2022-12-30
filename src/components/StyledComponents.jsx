@@ -20,10 +20,6 @@ const Center = styled.div`
     justify-content: center;
 `;
 
-const Logo = styled.h1`
-    font-weight: bold;
-    
-`;
 
 const Right = styled.div`
     flex: 1;
@@ -40,5 +36,5 @@ const MenuItem = styled.div`
 `;
 
 export { 
-    Wrapper, Logo, MenuItem, Left, Center, Right, 
+    Wrapper, MenuItem, Left, Center, Right, 
 }
